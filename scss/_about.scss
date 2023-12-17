@@ -1,0 +1,39 @@
+.home {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    .img{
+        display: flex;
+        img {
+            flex: 1 1 45rem;
+            width: 100%;
+        }
+    }
+    .content{
+        flex: 1 1 35rem;
+        h3 {
+            font-size: 56px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: solid black;
+        }
+    }
+    .btn {
+        width: 345px;
+        height: 50px;
+        a {
+            width: 150px;
+            height: 100px;
+            display: inline-flex;
+            background: aqua;
+            border: 2px solid aqua;
+            border-radius: 8px;
+            font-size: 19px;
+        }
+    }
+}

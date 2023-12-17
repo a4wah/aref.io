@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #89CFF3;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #4477CE;
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+nav .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+nav .nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 1rem;
+}
+nav .nav a:hover {
+  color: #4477CE;
+}
+nav .nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid #fff;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+nav .nav a:hover::after {
+  transform: scaleX(0.5);
+}
+nav .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+nav .navbar-extra a:hover {
+  color: #4477CE;
+}
+nav #humberger {
+  display: none;
+}
+
+.bio {
+  margin: 10%;
+  align-items: center;
+  display: flex;
+}
+.bio img {
+  margin: 0 8%;
+}
+.bio .content {
+  max-width: 600px;
+}
+.bio .content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+  font-style: bold;
+}
+.bio .icon {
+  display: flex;
+  padding: 5% 10%;
+  justify-content: space-around;
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+    height: 75%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+    height: 65;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+    height: 55%;
+  }
+}
+footer {
+  background-color: #4477CE;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.kontak {
+  margin: 10% 10%;
+  align-items: center;
+}
+.kontak form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  max-width: 600px;
+}
+
+.service {
+  display: grid;
+  place-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  background-color: #212121;
+  color: #ddd;
+  margin-top: 6%;
+}
+.service .main {
+  max-width: 75rem;
+  padding: 3em 1.5em;
+}
+.service .main .main_heading {
+  font-weight: 600;
+  font-size: 2.25em;
+  margin-bottom: 0.75em;
+  text-align: center;
+  color: #eceff1;
+}
+.service .main .card {
+  position: relative;
+  --flow-space: 0.5em;
+  --hsl: var(--hue), var(--saturation), var(--lightess);
+  flex: 1 1 14rem;
+  padding: 1.5em 2em;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  align-items: start;
+  gap: 1.25em;
+  color: #eceff1;
+  background-color: #2b2b2b;
+  border: 1px solid rgba(236, 239, 241, 0.2);
+  border-radius: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+.portofolio {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10%;
+}
+.portofolio .card {
+  position: relative;
+  cursor: pointer;
+}
+.portofolio .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+.portofolio .card .face.face1 {
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+.portofolio .card .face.face1 .content {
+  opacity: 0.2;
+  transition: 0.5s;
+}
+.portofolio .card .face.face1 .content img {
+  max-width: 250px;
+}
+.portofolio .card .face.face1 .content h2 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+.portofolio .card .face.face2 {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px black;
+  transform: translateY(-100px);
+}
+.portofolio .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+}
+.portofolio .card .face.face2 .content a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  padding: 3px;
+  border: 1px solid #333;
+}
+.portofolio .card .face.face2 .content a:hover {
+  background-color: #333;
+  color: #fff;
+}
+.portofolio .card:hover .face.face1 {
+  background-color: solid red;
+  transform: translateY(0);
+}
+.portofolio .card:hover .face.face1 .content {
+  opacity: 1;
+}
+.portofolio .card:hover .face.face2 {
+  transform: translateY(0);
+}
+
+.home {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+.home .img {
+  display: flex;
+}
+.home .img img {
+  flex: 1 1 45rem;
+  width: 100%;
+}
+.home .content {
+  flex: 1 1 35rem;
+}
+.home .content h3 {
+  font-size: 56px;
+  font-weight: 700;
+}
+.home .content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: solid black;
+}
+.home .btn {
+  width: 345px;
+  height: 50px;
+}
+.home .btn a {
+  width: 150px;
+  height: 100px;
+  display: inline-flex;
+  background: aqua;
+  border: 2px solid aqua;
+  border-radius: 8px;
+  font-size: 19px;
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .navbar-extra #humberger {
+    display: inline-block;
+  }
+  nav .nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #4477CE;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  nav .nav.active {
+    right: 0;
+  }
+  nav .nav a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  nav .nav a::after {
+    transform-origin: 0 0;
+  }
+  nav .nav a:hover:after {
+    transform: scaleX(0.2);
+  }
+  .portofolio {
+    top: 30px;
+  }
+  .home, .bio {
+    flex-wrap: wrap;
+    margin-top: 25%;
+    padding: auto;
+  }
+  .home img, .bio img {
+    width: 65%;
+    margin-top: -10%;
+  }
+  footer {
+    margin-top: 20%;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 55%;
+  }
+}/*# sourceMappingURL=main.css.map */

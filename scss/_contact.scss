@@ -1,0 +1,10 @@
+.kontak {
+    margin: 10% 10%;
+    align-items: center;
+    form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-width: 600px;
+    }
+}

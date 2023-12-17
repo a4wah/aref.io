@@ -1,0 +1,40 @@
+.service {
+    display: grid;
+    place-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    background-color: #212121;
+    color: #ddd;
+    margin-top: 6%;
+    .main {
+        max-width: 75rem;
+        padding: 3em 1.5em;
+        .main_heading{
+            font-weight: 600;
+            font-size: 2.25em;
+            margin-bottom: 0.75em;
+            text-align: center;
+            color: #eceff1;
+        }
+        .card {
+            position: relative;
+            --flow-space: 0.5em;
+            --hsl : var(--hue), var(--saturation), var(--lightess);
+            flex: 1 1 14rem;
+            padding: 1.5em 2em;
+            display: grid;
+            grid-template-rows: auto auto auto 1fr;
+            align-items: start;
+            gap: 1.25em;
+            color: #eceff1;
+            background-color: #2b2b2b;
+            border: 1px solid #eceff133;
+            border-radius: 15px;
+        }
+    }
+}
+
+ul {
+    list-style: none;
+}

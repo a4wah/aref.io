@@ -1,0 +1,70 @@
+// laptop
+@media (max-width: 1366px){
+    html {
+        font-size: 75%;
+    }
+}
+
+// tablet
+@media (max-width: 768px){
+    html {
+        font-size: 62.5%;
+    }
+    .navbar-extra {
+        #humberger {
+            display: inline-block;
+        }
+    }
+    nav {
+        .nav {
+            position: absolute;
+            top: 100%;
+            right: -100%;
+            background-color: #4477CE;
+            width: 30rem;
+            height: 100vh;
+            transition: 0.3s;
+        }
+        .nav.active{
+            right: 0;
+        }
+        .nav a {
+            color: #fff;
+            display: block;
+            margin: 1.5rem;
+            padding: 0.5rem;
+            font-size: 2rem;
+        }
+        .nav a::after {
+            transform-origin: 0 0;
+        }
+        .nav a:hover:after {
+            transform: scaleX(0.2);
+        }
+    }
+
+    .portofolio {
+        top: 30px;
+    }
+
+    .home, .bio{
+        flex-wrap: wrap;
+        margin-top: 25%;
+        padding: auto;
+        img {
+            width: 65%;
+            margin-top: -10%;
+        }
+    }
+
+    footer {
+        margin-top: 20%;
+    }
+}
+
+// phone
+@media (max-width: 576px){
+    html {
+        font-size: 55%;
+    }
+}
